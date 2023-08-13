@@ -16,16 +16,22 @@ import javax.swing.border.EmptyBorder;
 import Functions.MoneyExConversor;
 import Functions.WeatherConversor;
 /**
+ * Start Application
  * @author DigitalITSolutions82
  * @version 1.0
  * Alura Latam ONE G5 - Challenge2: Conversor de Moneda, Temperatura
  */
+@SuppressWarnings("serial")
 public class StartApps extends JFrame implements ActionListener {
 	private JPanel contentPane;
     private JLabel lblMoney;
     private JLabel lblWeather;
     JButton btnMoneyEx, btnWeather;
-
+/**
+ * Start Application Class
+ * @author DigitalITSolutions82
+ * @version 1.0
+ */
 	public StartApps() {
 		setSize(600, 400);
 		setTitle("Conversor Alura Latam - ONE");
@@ -34,7 +40,9 @@ public class StartApps extends JFrame implements ActionListener {
 	    setResizable(false);
 	    setLocationRelativeTo(null);
 	}
-	
+/**
+ * Start Panel Class
+ */
 	private void StartPanel() {
         setBounds(270, 200, 550, 590);
         contentPane = new JPanel();
@@ -88,6 +96,10 @@ public class StartApps extends JFrame implements ActionListener {
         btnWeather.addActionListener(this);
         
 	}
+	/**
+	 * 
+	 * @param args Start Apps Instance
+	 */
 	public static void main(String[] args) {
 		StartApps window = new StartApps();
 		window.setVisible(true);
@@ -95,10 +107,12 @@ public class StartApps extends JFrame implements ActionListener {
 	@Override
 	public void actionPerformed(ActionEvent e) {
         if (e.getSource() == btnMoneyEx) {
-        	MoneyExConversor moneyconversor = new MoneyExConversor();
+        	@SuppressWarnings("unused")
+			MoneyExConversor moneyconversor = new MoneyExConversor();
          } else if 
            (e.getSource() == btnWeather) {
-    	   WeatherConversor weatherconversor = new WeatherConversor();
+    	   @SuppressWarnings("unused")
+		WeatherConversor weatherconversor = new WeatherConversor();
     	   WeatherInterface weatherinterface = new WeatherInterface();
     	   weatherinterface.setVisible(true);
          }

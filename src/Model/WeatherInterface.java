@@ -1,9 +1,6 @@
 package Model;
 
-import java.awt.Color;
-import java.awt.Cursor;
-import java.awt.Font;
-import java.awt.SystemColor;
+import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.event.ItemEvent;
@@ -11,28 +8,27 @@ import java.awt.event.ItemListener;
 import java.awt.event.KeyEvent;
 import java.awt.event.KeyListener;
 
-import javax.swing.DefaultComboBoxModel;
-import javax.swing.JButton;
-import javax.swing.JComboBox;
-import javax.swing.JFrame;
-import javax.swing.JLabel;
-import javax.swing.JPanel;
-import javax.swing.JTextField;
-import javax.swing.SwingConstants;
-import javax.swing.UIManager;
+import javax.swing.*;
 import javax.swing.border.EmptyBorder;
 
 import Functions.WeatherConversor;
 import Functions.Start;
-
+/**
+ * Weather Interface
+ */
+@SuppressWarnings("serial")
 public class WeatherInterface extends JFrame implements ActionListener, ItemListener, KeyListener{
-	
+	/**
+	 * AWT and Swing Libraries/ Objects
+	 */
 	private JComboBox<String> cmbBoxWeather1, cmbBoxWeather2;
 	private JPanel contentPane;
 	private JLabel lblResult, lblTitle, lblConection;
 	private JTextField txtConvertValue;
 	private JButton btnConvert, btnBack;
-
+	/**
+	 * WeatherInterface Panel
+	 */
 	public WeatherInterface() {
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         StartPanel();
@@ -40,7 +36,9 @@ public class WeatherInterface extends JFrame implements ActionListener, ItemList
         setResizable(false);
         setLocationRelativeTo(null);
 	}
-	
+	/**
+	 * Start Panel 
+	 */
 	private void StartPanel() {
         setBounds(270, 200, 550, 590);
         contentPane = new JPanel();
@@ -171,7 +169,8 @@ public class WeatherInterface extends JFrame implements ActionListener, ItemList
         } else if (e.getSource() == btnConvert && isEmpty) {
             lblResult.setText("Enter a Value!!");
         } else if (btnBack == e.getSource()) {
-            Start start = new Start();
+            @SuppressWarnings("unused")
+			Start start = new Start();
             this.dispose();
 
         }
@@ -179,26 +178,18 @@ public class WeatherInterface extends JFrame implements ActionListener, ItemList
 	}
 
 	@Override
-	public void itemStateChanged(ItemEvent e) {
-		// TODO Auto-generated method stub
-		
+	public void itemStateChanged(ItemEvent e) {	
 	}
 
 	@Override
 	public void keyTyped(KeyEvent e) {
-		// TODO Auto-generated method stub
-		
 	}
 
 	@Override
-	public void keyPressed(KeyEvent e) {
-		// TODO Auto-generated method stub
-		
+	public void keyPressed(KeyEvent e) {	
 	}
 
 	@Override
-	public void keyReleased(KeyEvent e) {
-		// TODO Auto-generated method stub
-		
+	public void keyReleased(KeyEvent e) {	
 	}
 }

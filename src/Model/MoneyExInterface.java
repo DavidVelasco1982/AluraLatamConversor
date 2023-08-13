@@ -23,9 +23,16 @@ import javax.swing.border.EmptyBorder;
 
 import Functions.ConversionSys;
 import Functions.Start;
-
+/**
+ * Money Exchange Interface
+ * @author DigitalITSolutions82
+ * @version 1.0
+ */
+@SuppressWarnings("serial")
 public class MoneyExInterface extends JFrame implements ActionListener, ItemListener, KeyListener  {
-	
+	/**
+	 * Java Swing Objects
+	 */ 
 	private JPanel contentPane;
 	private JComboBox<String> comboBoxMoney;
 	private JTextField txtValueConvert;
@@ -33,11 +40,16 @@ public class MoneyExInterface extends JFrame implements ActionListener, ItemList
 	private JLabel lblResult,lblTitle, lblDescript;
 	private ConversionSys conversion;
 
-	
+	/**
+	 * Asign Conversion
+	 * @param conversion Parameter Conversion
+	 */
     public void asignConversion(ConversionSys conversion){
         this.conversion = conversion;
     }
-    
+	 /**
+	  *   MoneyExInterface Panel
+	  */
     public MoneyExInterface() {
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         setTitle("Conversor Alura Latam - ONE");
@@ -45,7 +57,9 @@ public class MoneyExInterface extends JFrame implements ActionListener, ItemList
         setResizable(false);
         setLocationRelativeTo(null);
     }
-    
+	/**
+	 * StartPanel 
+	 */
     public void StartPanel( ) {
         setBounds(270, 200, 550, 590);
         contentPane = new JPanel();
@@ -59,13 +73,18 @@ public class MoneyExInterface extends JFrame implements ActionListener, ItemList
         comboBoxMoney = new JComboBox<String>();
         comboBoxMoney.setFont(new Font("Tahoma", Font.BOLD, 15));
         comboBoxMoney.setBounds(270,150,210,35);
+        /**
+         * ComboBox Money Exchange Options
+         */
         comboBoxMoney.setModel(new DefaultComboBoxModel<String>(new String[]{
                 "Pesos MXN to Dolares", "Pesos MXN to Euros", "Pesos MXN to Libras", "Pesos MXN to Yen", "Pesos MXN to Won-Coreano",
                 "Dolares to Pesos MXN", "Euros to Pesos MXN", "Libras to Pesos MXN", "Yen Japones to Pesos MXN", "Won Sul-Coreano to Pesos MXN"
         }));
         comboBoxMoney.setToolTipText("");
         comboBoxMoney.addItemListener(this);
-        
+        /**
+         * JLabel
+         */
         lblTitle = new JLabel("Money Exchange");
         lblTitle.setBounds(100,25,300,30);
         lblTitle.setFont(new Font("Tahoma", Font.BOLD, 27));
@@ -135,7 +154,8 @@ public class MoneyExInterface extends JFrame implements ActionListener, ItemList
                 lblResult.setText("Error - Invalid Parameter");
             }
         } else if (btnBack == e.getSource()) {
-            Start start = new Start();
+            @SuppressWarnings("unused")
+			Start start = new Start();
             this.dispose();
         } else if (isEmpty) {
             lblResult.setText("Enter a Valid Value");
@@ -146,8 +166,6 @@ public class MoneyExInterface extends JFrame implements ActionListener, ItemList
 
 	@Override
 	public void itemStateChanged(ItemEvent e) {
-		// TODO Auto-generated method stub
-		
 	}
 
 	@Override
@@ -164,13 +182,9 @@ public class MoneyExInterface extends JFrame implements ActionListener, ItemList
 
 	@Override
 	public void keyPressed(KeyEvent e) {
-		// TODO Auto-generated method stub
-		
 	}
 
 	@Override
 	public void keyReleased(KeyEvent e) {
-		// TODO Auto-generated method stub
-		
 	}
 }

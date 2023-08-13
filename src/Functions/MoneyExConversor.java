@@ -1,68 +1,80 @@
 package Functions;
 
 import Model.MoneyExInterface;
-
+/**
+ * Money Exchange Conversor Rate
+ */
 public class MoneyExConversor {
-
-	
-	
-
+	/**
+	 * Exchange Rate Convertion
+	 */
 	public enum ExRate {
-        MXNtoUSD(0.0585,"Pesos MXN to Dolares" ,"$"),
-        MXNtoEUR(0.0532,"Pesos MXN to Euros", "€"),
-        MXNtoGBP(0.0458,"Pesos MXN to Libras", "£"),
-        MXNtoJPY(8.3685,"Pesos MXN to Yen", "¥"),
-        MXNtoKWR(76.9225,"Pesos MXN to Won-Coreano", "₩"),
-        USDtoMXN(17.1213,"Dolares to Pesos MXN", "MXN $"),
-        EURtoMXN(18.7925,"Euros to Pesos MXN", "MXN $"),
-        GBPtoMXN(21.8308, "Libras to Pesos MXN",  "MXN $"),
-        JPYtoMXN(0.1195, "Yen Japones to Pesos MXN",  "MXN $"),
-        KWRtoMXN(0.013, "Won Sul-Coreano to Pesos MXN",  "MXN $");
-		/*MXNtoUSD(17.0797 ,"Pesos MXN to Dolares" ,"$"),
-		MXNtoEUR(18.7925 ,"Pesos MXN to Euros", "€"),
-		MXNtoGBP(21.8308 ,"Pesos MXN to Libras", "£"),
-		MXNtoJPY(0.1198 ,"Pesos MXN to Yen", "¥"),
-		MXNtoKRW(0.0131 ,"Pesos MXN to Yen", "₩"),
-        USDtoMXN(0.0585 ,"Dolares to Pesos", "MXN"),
-        EURtoMXN(0.0532 ,"Euros to Pesos", "MXN"),
-        GBPtoMXN(0.0458, "Libras to Pesos",  "MXN"),
-        JPYtoMXN(8.3447, "Yen Japones to Pesos",  "MXN"),
-        KRWtoMXN(76.94, "Won Sul-Coreano to Pesos",  "MXN");*/
-		
-        //atributos
+        MXtoUS(0.0585,"Pesos MXN to Dolares" ,"$"),
+        MXtoEU(0.0532,"Pesos MXN to Euros", "€"),
+        MXtoGB(0.0458,"Pesos MXN to Libras", "£"),
+        MXtoJP(8.3685,"Pesos MXN to Yen", "¥"),
+        MXtoKW(76.9225,"Pesos MXN to Won-Coreano", "₩"),
+        UStoMX(17.1213,"Dolares to Pesos MXN", "MXN $"),
+        EUtoMX(18.7925,"Euros to Pesos MXN", "MXN $"),
+        GBtoMX(21.8308, "Libras to Pesos MXN",  "MXN $"),
+        JPtoMX(0.1195, "Yen Japones to Pesos MXN",  "MXN $"),
+        KWtoMX(0.013, "Won Sul-Coreano to Pesos MXN",  "MXN $");
+		/**
+		 * Variables
+		 */
         private double value;
         private String name;
         private String symbol;
-        
+		/**
+		 * ExRate Instance 1
+		 */
 		ExRate() {
 		}
-		
+		/**
+		 * ExRate Instance 2
+		 * @param value Parameter Value
+		 * @param name Parameter Name
+		 * @param symbol Parameter Symbol
+		 */
 		ExRate(double value, String name, String symbol) {
 			this.value = value;
 			this.name = name;
 			this.symbol = symbol;
 		}
-		
+		/**
+		 * Get Value
+		 * @return Value
+		 */
 		public double getValue() {
 			return value;
 		}
-		
+		/**
+		 * Get Name
+		 * @return Name
+		 */
 		public String getName() {
 			return name;
 		}
-		
+		/**
+		 * Get Symbol
+		 * @return Symbol
+		 */
 		public String getSymbol() {
 			return symbol;
 		}
 	}
 	
 	private ConversionSys ConversionSys;
-	
+	/**
+	 * System Convertion
+	 */
 	public MoneyExConversor( ) {
 		ConversionSys = new ConversionSys();
 		OpenWindow();
 	}
-	
+	/**
+	 * Open Window
+	 */
 	public void OpenWindow() {
 		MoneyExInterface interface1 = new MoneyExInterface();
 		//interface1.asignConversion(ConversionSys);

@@ -5,9 +5,15 @@ import java.util.HashMap;
 import java.util.Map;
 
 import Functions.MoneyExConversor.ExRate;
-
+/**
+ * @author DigitalITSolutions82
+ * Conversion System
+ */
 public class ConversionSys {
-
+	/**
+	 * Get Divisa Name
+	 * @return Return Value Converted.
+	 */
 	public static Map<String, Double> CreateDivisa() {
 		Map<String, Double> mapDivisa = new HashMap<>();
 		for (ExRate divisa : ExRate.values()) {
@@ -16,7 +22,11 @@ public class ConversionSys {
 		return mapDivisa;
 		
 	}
-	
+	/**
+	 * Get Divisa Name	
+	 * @param divisaName Currency Name
+	 * @return Divisa
+	 */
 	public static ExRate getDivisa(String divisaName) {
 		for(ExRate divisa : ExRate.values()) {
 			if (divisa.getName().equals(divisaName)) {
@@ -25,7 +35,12 @@ public class ConversionSys {
 		}
 		return null;
 	}
-	
+	/**
+	 * Money Exchange Conversor
+	 * @param typeDivisa Type Visa
+	 * @param amount Quantity to Convert
+	 * @return Result
+	 */
 	public String MoneyExConversor(String typeDivisa, Double amount) {
 		Map<String, Double> mapDivisa = CreateDivisa();
 		ExRate divisa = getDivisa(typeDivisa);
@@ -38,7 +53,7 @@ public class ConversionSys {
             String symbol = divisa.getSymbol();
             return symbol + " " + format.format(total);
         }else {
-            return "No se encuentra la moneda";
+            return "Currency it doesn't exist";
         }
 	}
 }

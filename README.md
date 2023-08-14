@@ -1,6 +1,6 @@
-# AluraLatamConversor
+# Alura Latam + Oracle = Challenge2 "Conversor"
 <em> # Alura Latam + Oracle = Challenge2 - Conversor </em>
-
+![Alura Latam](./media/alura_challenge.png)
 
 ##Índice
 
@@ -26,7 +26,7 @@
   - [x] Convertir de **Libras Esterlinas** a la moneda de tu país
   - [x] Convertir de **Yen Japonés** a la moneda de tu país
   - [x] Convertir de **Won sul-coreano** a la moneda de tu país
-- [ ] **Extra:** Añadir otros tipos de conversiones, ejm. temperatura
+- [x] **Extra:** Añadir otros tipos de conversiones, ejm. temperatura
 - [x] **Menu principal**. Cuadro de dialogo debe permitir al usuario escoger entre
 las opciones de conversión, según los requisitos solo es necesario hacer un
 conversor de moneda, en caso que desees implementar otras funciones añadir una
@@ -56,23 +56,69 @@ acepten caracteres no numéricos.
 continuar usando el programa presentando las siguientes opciones:
   - [x] **Yes**: Debe llevar nuevamente a nuestro usuario a menu principal para
   escoger una opción de conversión
-  - [x] **No**: Debe mostrar un mensaje de "Programa Finalizado"
-  - [x] **Cancel**: Debe mostrar un mensaje de "Programa Finalizado"
-- [x] Si el usuario selecciona la opción **No** o **Cancel** utilice
+  - [ ] **No**: Debe mostrar un mensaje de "Programa Finalizado"
+  - [ ] **Cancel**: Debe mostrar un mensaje de "Programa Finalizado"
+- [ ] Si el usuario selecciona la opción **No** o **Cancel** utilice
 **showMessageDialog** para que pueda cerrar el programa. con el mensaje
 ***"Programa Terminado"***
-- [x] **Extra** Personal: Crear 3 versiones de la aplicación, **cli, tui y gui**
+- [ ] **Extra** Personal: Crear 3 versiones de la aplicación, **cli, tui y gui**
+
+</details>
+
+<details>
+<summary><b><font size="+2">Knowledge Base</font></b></summary>
+
+- Alura Blog - java.[swing](https://www.aluracursos.com/blog/biblioteca-swing)
+- Alura Blog - Eclipse
+[WindowBuilder](https://www.aluracursos.com/blog/interfaces-graficas-con-eclipse-windowbuilder)
+- Alura YouTube - [enums](https://www.youtube.com/watch?v=EoPvlE85XAQ)
+- [JOptionPane](https://docs.oracle.com/en/java/javase/17/docs/api/java.desktop/javax/swing/JOptionPane.html)
+Doc
 
 </details>
 *[Estado del proyecto](#Estado-del-proyecto)
 
 *[Características de la aplicación y demostración](#Características-de-la-aplicación-y-demostración)
 
-*[Acceso al proyecto](#acceso-proyecto)
+## Menú Principal
 
+[<img src="./media/MainMenu.png" width="400"/>](./media/MainMenu.png)
+
+## Conversor de Monedas
+
+[<img src="./media/Step1.png" width="400"/>](./media/Step1.png)
+[<img src="./media/Step2.png" width="400"/>](./media/Step2.png)
+[<img src="./media/Step3.png" width="400"/>](./media/Step3.png)
+[<img src="./media/Step4.png" width="400"/>](./media/Step4.png)
+[<img src="./media/Exception1.png" width="400"/>](./media/Exception1.png)
+
+## Conversor de Temperatura
+
+[<img src="./media/Step1.png" width="400"/>](./media/Step1t.png)
+[<img src="./media/Step2.png" width="400"/>](./media/Step2t.png)
+[<img src="./media/Step3.png" width="400"/>](./media/Step3t.png)
+[<img src="./media/Step4.png" width="400"/>](./media/Step4t.png)
+[<img src="./media/Exception1.png" width="400"/>](./media/Exception1t.png)
+
+*[Acceso al proyecto](#acceso-proyecto)
+#### Instrucciones
+
+- Para correr applicacion desde el **IDE**
+
+  Desde archivo `AluraLatamConversor.jar`
+
+- Para correr el [Conversor.jar](./target/Conversor.AluraLatamConversor.jar)
+  
 *[Tecnologías utilizadas](#tecnologías-utilizadas)
+- **Jar**
+  - Java JRE 17 o superior
+- **Source**
+  - Java JDK 17 o superior
+  - Eclipse IDE 2023-06 (4.28.0) o superior
 
 *[Personas Contribuyentes](#personas-contribuyentes)
+
+LinkedIn - [Enrique Velasco](https://www.linkedin.com/in/enriquevelasco82/)
 
 *[Personas-Desarrolladores del Proyecto](#personas-desarrolladores)
 
